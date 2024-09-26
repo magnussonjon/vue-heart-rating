@@ -1,12 +1,12 @@
 import {mount} from '@vue/test-utils'
-import Star from '../src/star.vue'
-import StarRating from "../src/star-rating"
+import Heart from '../src/heart.vue'
+import HeartRating from "../src/heart-rating"
 
 
 var defaultProps = {
     fill: 50,
     size: 40,
-    starId: 1,
+    heartId: 1,
     activeColor: 'yellow',
     inactiveColor: 'grey',
     borderColor: '#000',
@@ -20,17 +20,17 @@ var defaultProps = {
 };
 
 
-describe('Star Component', () => {
+describe('Heart Component', () => {
 
     it('should set the props', () => {
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: defaultProps
         })
         const props = wrapper.props()
 
         expect(props.fill).toEqual(50);
         expect(props.size).toEqual(40);
-        expect(props.starId).toBe(1);
+        expect(props.heartId).toBe(1);
         expect(props.activeColor).toBe('yellow');
         expect(props.inactiveColor).toBe('grey');
         expect(props.borderColor).toBe('#000');
@@ -45,27 +45,27 @@ describe('Star Component', () => {
 
     })
 
-    it('should scale the star based on size', () => {
+    it('should scale the heart based on size', () => {
 
-        let starPoints = [19.8, 2.2, 6.6, 43.56, 39.6, 17.16, 0, 17.16, 33, 43.56];
+        let heartPoints = [19.8, 2.2, 6.6, 43.56, 39.6, 17.16, 0, 17.16, 33, 43.56];
 
         // Double maximum size
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: Object.assign(defaultProps, {
                 roundedCorners: false,
                 size: 87.12 // double maximum size
             })
         })
 
-        let createdStarPoints = wrapper.vm.starPoints
+        let createdHeartPoints = wrapper.vm.heartPoints
         // expect each point to be doubled!
-        for (var i = 0; i < starPoints.length; i++) {
-            expect(createdStarPoints[i]).toEqual(starPoints[i] * 2)
+        for (var i = 0; i < heartPoints.length; i++) {
+            expect(createdHeartPoints[i]).toEqual(heartPoints[i] * 2)
         }
     })
 
     it('should set the correct fill level when using rtl', () => {
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: Object.assign(defaultProps, {
                 fill: 51,
                 rtl: true
@@ -73,13 +73,13 @@ describe('Star Component', () => {
         });
 
         // right to left
-        expect(wrapper.vm.starFill).toEqual("49%");
+        expect(wrapper.vm.heartFill).toEqual("49%");
 
     });
 
     it('should set the fill level', () => {
 
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: defaultProps
         });
         let props = wrapper.props();
@@ -89,7 +89,7 @@ describe('Star Component', () => {
     });
 
     it('should calculate the correct fill', () => {
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: Object.assign(defaultProps, {
                 fill: 50
             })
@@ -101,7 +101,7 @@ describe('Star Component', () => {
     });
 
     it('should set getBorderColor to borderColor prop when no fill is 0', () => {
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: Object.assign(defaultProps, {
                 fill: 0,
                 borderColor: "#bada55",
@@ -113,7 +113,7 @@ describe('Star Component', () => {
     })
 
     it('should set getBorderColor to activeBorderColor prop when no fill is more than 0', () => {
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: Object.assign(defaultProps, {
                 fill: 1,
                 borderColor: "#bada55",
@@ -125,7 +125,7 @@ describe('Star Component', () => {
 
 
     it('should create a random gradient id', () => {
-        const wrapper = mount(Star, {
+        const wrapper = mount(Heart, {
             propsData: defaultProps
         });
 
@@ -133,26 +133,26 @@ describe('Star Component', () => {
     });
 
 
-    it('should not add the vue-star-rating-star-rotate class when animate is set to false', () => {
-        const wrapper = mount(StarRating)
+    it('should not add the vue-heart-rating-heart-rotate class when animate is set to false', () => {
+        const wrapper = mount(HeartRating)
 
-        expect(wrapper.findAll('.vue-star-rating-star-rotate').length).toEqual(0)
+        expect(wrapper.findAll('.vue-heart-rating-heart-rotate').length).toEqual(0)
     });
 
 
-    it('should add the vue-star-rating-star-rotate class when animate is set to true', () => {
-        const wrapper = mount(StarRating,{
+    it('should add the vue-heart-rating-heart-rotate class when animate is set to true', () => {
+        const wrapper = mount(HeartRating,{
             propsData : {
                 animate: true
             }
         })
 
-        expect(wrapper.findAll('.vue-star-rating-star-rotate').length > 0).toBeTruthy()
+        expect(wrapper.findAll('.vue-heart-rating-heart-rotate').length > 0).toBeTruthy()
     });
 
     describe('color parsing function', () => {
         it('should calculate hex(a) color and opacity', () => {
-            const wrapper = mount(Star, {
+            const wrapper = mount(Heart, {
                 propsData: Object.assign(defaultProps, {
                     fill: 50
                 })
@@ -172,7 +172,7 @@ describe('Star Component', () => {
         });
 
         it('should calculate rgb(a) color and opacity', () => {
-            const wrapper = mount(Star, {
+            const wrapper = mount(Heart, {
                 propsData: Object.assign(defaultProps, {
                     fill: 50
                 })
@@ -201,7 +201,7 @@ describe('Star Component', () => {
         });
 
         it('should calculate hsl(a) color and opacity', () => {
-            const wrapper = mount(Star, {
+            const wrapper = mount(Heart, {
                 propsData: Object.assign(defaultProps, {
                     fill: 50
                 })
@@ -229,28 +229,28 @@ describe('Star Component', () => {
     })
 
     describe('dom events', () => {
-        it('should emit "star-selected" event on click', async () => {
-            const wrapper = mount(Star, {
+        it('should emit "heart-selected" event on click', async () => {
+            const wrapper = mount(Heart, {
                 propsData: defaultProps
             });
 
-            let star = wrapper.find('polygon')
-            await star.trigger('click')
+            let heart = wrapper.find('polygon')
+            await heart.trigger('click')
 
-            expect(wrapper.emitted()).toHaveProperty('star-selected')
+            expect(wrapper.emitted()).toHaveProperty('heart-selected')
 
         });
 
 
-        it('should emit "star-mouse-move" event on mousemove', async () => {
-            const wrapper = mount(Star, {
+        it('should emit "heart-mouse-move" event on mousemove', async () => {
+            const wrapper = mount(Heart, {
                 propsData: defaultProps
             });
 
-            let star = wrapper.find('polygon')
-            await star.trigger('mousemove')
+            let heart = wrapper.find('polygon')
+            await heart.trigger('mousemove')
 
-            expect(wrapper.emitted()).toHaveProperty('star-mouse-move')
+            expect(wrapper.emitted()).toHaveProperty('heart-mouse-move')
 
         });
     });

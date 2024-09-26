@@ -7,31 +7,31 @@
 
 ## Version 2.1.0
 
-- New `animate` prop added which slightly rotates and expands the star on mouseover
+- New `animate` prop added which slightly rotates and expands the heart on mouseover
 - New `active-on-click` prop applies active colors on click rather than on hover when set
-- New `active-border-color` prop, which allows border colour to be changed when star is active (issue #34)
+- New `active-border-color` prop, which allows border colour to be changed when heart is active (issue #34)
 - `active-color` and `active-border-color` now optionally accept an array of color values, which can be used as break points
 - :glow no longer requires glow-color to be set (thanks to @bifot)
-- Screen readers are now supported. You can change the default message ("Rated {{rating}} out of {{maxRating}} stars") by using the `screen-reader` scoped slot:
+- Screen readers are now supported. You can change the default message ("Rated {{rating}} out of {{maxRating}} hearts") by using the `screen-reader` scoped slot:
 
 ````javascript
-<star-rating>
+<heart-rating>
     <template v-slot:screen-reader="slotProps">
-        This product has been rated {{slotProps.rating}} out of {{slotProps.stars}} stars
+        This product has been rated {{slotProps.rating}} out of {{slotProps.hearts}} hearts
     </template>
-</star-rating>
+</heart-rating>
 ````
 
 - Better support for touch screen devices
 - Refactor parseAlphaColor method into own class
-- Refactor star.vue
+- Refactor heart.vue
 
 ## Version 2.0.0 - Vue 3!!
 
 - Code updated to Vue 3
 - Examples updated to Vue 3
 - `rating-selected` event renamed to `update:rating` for use witn `v-model`
-- `current-rating` event renamed to `hover:rating` (note: kebab-case is usually preferred, but this format has been chosen for consistency with the update:rating event so rule ignored for star-rating.vue)
+- `current-rating` event renamed to `hover:rating` (note: kebab-case is usually preferred, but this format has been chosen for consistency with the update:rating event so rule ignored for heart-rating.vue)
 - `vue-cli-service` now being used for builds and dev
 - Deprecated babel-preset-es2015 replaced with "@babel/preset-env" for tests
 - Tests rewritten using vue-test-utils with jest (vue-jest)
@@ -44,11 +44,11 @@
 
 ## Version 1.6.0
 - Add rounded corners (thanks to @SparoHawk)
-- Add custom star shapes (thanks to @SparoHawk)
-- Add glow prop, for a subtle glow when star selected
+- Add custom heart shapes (thanks to @SparoHawk)
+- Add glow prop, for a subtle glow when heart selected
 - Add glow-color prop
 - Add viewbox attribute
-- Space by adding right margin to star div in star-rating.vue, rather than on SVG
+- Space by adding right margin to heart div in heart-rating.vue, rather than on SVG
 
 ## Version 1.5.1
 - Fixed Screenshot im Readme.md

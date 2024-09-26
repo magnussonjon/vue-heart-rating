@@ -1,8 +1,8 @@
 <template>
   <svg
-    :class="['vue-star-rating-star', {'vue-star-rating-star-rotate' : shouldAnimate}]"
-    :height="starSize"
-    :width="starSize"
+    :class="['vue-heart-rating-heart', {'vue-heart-rating-heart-rotate' : shouldAnimate}]"
+    :height="heartSize"
+    :width="heartSize"
     :viewBox="viewBox"
     @mousemove="mouseMoving"
     @click="selected"
@@ -18,12 +18,12 @@
       y2="0"
     >
       <stop
-        :offset="starFill"
+        :offset="heartFill"
         :stop-color="(rtl) ? getColor(inactiveColor) : getColor(activeColor)"
         :stop-opacity="(rtl) ? getOpacity(inactiveColor) : getOpacity(activeColor)"
       />
       <stop
-        :offset="starFill"
+        :offset="heartFill"
         :stop-color="(rtl) ? getColor(activeColor) : getColor(inactiveColor)"
         :stop-opacity="(rtl) ? getOpacity(activeColor) : getOpacity(inactiveColor)"
       />
@@ -47,7 +47,7 @@
 
     <polygon
       v-show="glowColor && glow > 0 && fill > 0"
-      :points="starPointsToString"
+      :points="heartPointsToString"
       :fill="gradId"
       :stroke="glowColor"
       :filter="'url(#'+glowId+')'"
@@ -55,14 +55,14 @@
     />
 
     <polygon
-      :points="starPointsToString"
+      :points="heartPointsToString"
       :fill="gradId"
       :stroke="getBorderColor"
       :stroke-width="border"
       :stroke-linejoin="strokeLinejoin"
     />
     <polygon
-      :points="starPointsToString"
+      :points="heartPointsToString"
       :fill="gradId"
     />
   </svg>
@@ -72,7 +72,7 @@
 import AlphaColor from './classes/AlphaColor'
 
 export default {
-    name: 'Star',
+    name: 'Heart',
     props: {
         fill: {
             type: Number,
@@ -88,7 +88,7 @@ export default {
             type: Number,
             default: 50
         },
-        starId: {
+        heartId: {
             type: Number,
             required: true
         },
@@ -134,28 +134,28 @@ export default {
             default: false
         }
     },
-    emits: ['star-mouse-move', 'star-selected'],
+    emits: ['heart-mouse-move', 'heart-selected'],
     data() {
         return {
-            starPoints: [19.8, 2.2, 6.6, 43.56, 39.6, 17.16, 0, 17.16, 33, 43.56],
+            heartPoints: [19.8, 2.2, 6.6, 43.56, 39.6, 17.16, 0, 17.16, 33, 43.56],
             grad: '',
             glowId: '',
-            isStarActive: true
+            isHeartActive: true
         }
     },
     computed: {
-        starPointsToString() {
-            return this.starPoints.join(',')
+        heartPointsToString() {
+            return this.heartPoints.join(',')
         },
         gradId() {
             return 'url(#' + this.grad + ')'
         },
-        starSize() {
-            // Adjust star size when rounded corners are set with no border, to account for the 'hidden' border
+        heartSize() {
+            // Adjust heart size when rounded corners are set with no border, to account for the 'hidden' border
             const size = (this.roundedCorners && this.borderWidth <= 0) ? parseInt(this.size) - parseInt(this.border) : this.size
             return parseInt(size) + parseInt(this.border)
         },
-        starFill() {
+        heartFill() {
             return (this.rtl) ? 100 - this.fill + '%' : this.fill + '%'
         },
         border() {
@@ -170,7 +170,7 @@ export default {
             return (this.fill <= 0) ? this.borderColor : this.activeBorderColor
         },
         maxSize() {
-            return this.starPoints.reduce(function(a, b) {
+            return this.heartPoints.reduce(function(a, b) {
                 return Math.max(a, b)
             })
         },
@@ -178,14 +178,14 @@ export default {
             return '0 0 ' + this.maxSize + ' ' + this.maxSize
         },
         shouldAnimate() {
-            return this.animate && this.isStarActive
+            return this.animate && this.isHeartActive
         },
         strokeLinejoin() {
             return this.roundedCorners ? 'round' : 'miter'
         }
     },
     created() {
-        this.starPoints = (this.points.length) ? this.points : this.starPoints
+        this.heartPoints = (this.points.length) ? this.points : this.heartPoints
         this.calculatePoints()
         this.grad = this.getRandomId()
         this.glowId = this.getRandomId()
@@ -193,34 +193,34 @@ export default {
     methods: {
         mouseMoving($event) {
             if ($event.touchAction !== 'undefined') {
-                this.$emit('star-mouse-move', {
+                this.$emit('heart-mouse-move', {
                     event: $event,
                     position: this.getPosition($event),
-                    id: this.starId
+                    id: this.heartId
                 })
             }
         },
         touchStart() {
             this.$nextTick(() => {
-                this.isStarActive = true
+                this.isHeartActive = true
             })
         },
         touchEnd() {
             this.$nextTick(() => {
-                this.isStarActive = false
+                this.isHeartActive = false
             })
         },
         getPosition($event) {
             // calculate position in percentage.
-            let starWidth = (92 / 100) * this.size
+            let heartWidth = (92 / 100) * this.size
             const offset = (this.rtl) ? Math.min($event.offsetX, 45) : Math.max($event.offsetX, 1)
-            let position = Math.round((100 / starWidth) * offset)
+            let position = Math.round((100 / heartWidth) * offset)
 
             return Math.min(position, 100)
         },
         selected($event) {
-            this.$emit('star-selected', {
-                id: this.starId,
+            this.$emit('heart-selected', {
+                id: this.heartId,
                 position: this.getPosition($event)
             })
         },
@@ -228,7 +228,7 @@ export default {
             return Math.random().toString(36).substring(7)
         },
         calculatePoints() {
-            this.starPoints = this.starPoints.map((point, i) => {
+            this.heartPoints = this.heartPoints.map((point, i) => {
                 const offset = i % 2 === 0 ? this.border * 1.5 : 0
                 return ((this.size / this.maxSize) * point) + offset
             })
@@ -244,15 +244,15 @@ export default {
 </script>
 
 <style scoped>
-    .vue-star-rating-star {
+    .vue-heart-rating-heart {
         overflow: visible !important;
     }
 
-    .vue-star-rating-star-rotate {
+    .vue-heart-rating-heart-rotate {
         transition: all .25s;
     }
 
-    .vue-star-rating-star-rotate:hover {
+    .vue-heart-rating-heart-rotate:hover {
         transition: transform 0.25s;
         transform: rotate(-15deg) scale(1.3)
     }

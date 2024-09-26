@@ -1,3 +1,3 @@
-import StarRating from './star-rating.vue'
+import HeartRating from './heart-rating.vue'
 
-export default StarRating
+export default HeartRating

@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("vue"));
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["VueHeartRating"] = factory(require("vue"));
+	else
+		root["VueHeartRating"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -94,7 +103,7 @@ module.exports =
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("4bad");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".vue-star-rating-star[data-v-f675a548]{display:inline-block;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}.vue-star-rating-pointer[data-v-f675a548]{cursor:pointer}.vue-star-rating[data-v-f675a548]{display:flex;align-items:center}.vue-star-rating-inline[data-v-f675a548]{display:inline-flex}.vue-star-rating-rating-text[data-v-f675a548]{margin-left:7px}.vue-star-rating-rtl[data-v-f675a548]{direction:rtl}.vue-star-rating-rtl .vue-star-rating-rating-text[data-v-f675a548]{margin-right:10px;direction:rtl}.sr-only[data-v-f675a548]{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}", ""]);
+exports.push([module.i, ".vue-heart-rating-heart[data-v-f675a548]{display:inline-block;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}.vue-heart-rating-pointer[data-v-f675a548]{cursor:pointer}.vue-heart-rating[data-v-f675a548]{display:flex;align-items:center}.vue-heart-rating-inline[data-v-f675a548]{display:inline-flex}.vue-heart-rating-rating-text[data-v-f675a548]{margin-left:7px}.vue-heart-rating-rtl[data-v-f675a548]{direction:rtl}.vue-heart-rating-rtl .vue-heart-rating-rating-text[data-v-f675a548]{margin-right:10px;direction:rtl}.sr-only[data-v-f675a548]{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}", ""]);
 // Exports
 module.exports = exports;
 
@@ -108,7 +117,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("4bad");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".vue-star-rating-star[data-v-11edf2d6]{overflow:visible!important}.vue-star-rating-star-rotate[data-v-11edf2d6]{transition:all .25s}.vue-star-rating-star-rotate[data-v-11edf2d6]:hover{transition:transform .25s;transform:rotate(-15deg) scale(1.3)}", ""]);
+exports.push([module.i, ".vue-heart-rating-heart[data-v-11edf2d6]{overflow:visible!important}.vue-heart-rating-heart-rotate[data-v-11edf2d6]{transition:all .25s}.vue-heart-rating-heart-rotate[data-v-11edf2d6]:hover{transition:transform .25s;transform:rotate(-15deg) scale(1.3)}", ""]);
 // Exports
 module.exports = exports;
 
@@ -585,7 +594,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ "8bbf":
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
 
 /***/ }),
 
@@ -593,8 +602,8 @@ module.exports = require("vue");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_star_rating_vue_vue_type_style_index_0_id_f675a548_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("eed3");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_star_rating_vue_vue_type_style_index_0_id_f675a548_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_star_rating_vue_vue_type_style_index_0_id_f675a548_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_heart_rating_vue_vue_type_style_index_0_id_f675a548_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("eed3");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_heart_rating_vue_vue_type_style_index_0_id_f675a548_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_heart_rating_vue_vue_type_style_index_0_id_f675a548_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
  
 
@@ -604,8 +613,8 @@ module.exports = require("vue");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_star_vue_vue_type_style_index_0_id_11edf2d6_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("5bef");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_star_vue_vue_type_style_index_0_id_11edf2d6_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_star_vue_vue_type_style_index_0_id_11edf2d6_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_heart_vue_vue_type_style_index_0_id_11edf2d6_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("5bef");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_heart_vue_vue_type_style_index_0_id_11edf2d6_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_vue_cli_service_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_v16_dist_index_js_ref_0_1_heart_vue_vue_type_style_index_0_id_11edf2d6_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
  
 
@@ -720,7 +729,7 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// CONCATENATED MODULE: ./node_modules/vue-loader-v16/dist/templateLoader.js??ref--5!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/star-rating.vue?vue&type=template&id=f675a548&scoped=true&bindings={"increment":"props","rating":"props","roundStartRating":"props","activeColor":"props","inactiveColor":"props","maxRating":"props","starPoints":"props","starSize":"props","showRating":"props","readOnly":"props","textClass":"props","inline":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","padding":"props","rtl":"props","fixedPoints":"props","glow":"props","glowColor":"props","clearable":"props","activeOnClick":"props","animate":"props","step":"data","fillLevel":"data","currentRating":"data","selectedRating":"data","ratingSelected":"data","formattedRating":"options","shouldRound":"options","margin":"options","activeColors":"options","currentActiveColor":"options","activeBorderColors":"options","currentActiveBorderColor":"options","setRating":"options","resetRating":"options","createStars":"options","round":"options","padColors":"options"}
+// CONCATENATED MODULE: ./node_modules/vue-loader-v16/dist/templateLoader.js??ref--5!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/heart-rating.vue?vue&type=template&id=f675a548&scoped=true&bindings={"increment":"props","rating":"props","roundStartRating":"props","activeColor":"props","inactiveColor":"props","maxRating":"props","heartPoints":"props","heartSize":"props","showRating":"props","readOnly":"props","textClass":"props","inline":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","padding":"props","rtl":"props","fixedPoints":"props","glow":"props","glowColor":"props","clearable":"props","activeOnClick":"props","animate":"props","step":"data","fillLevel":"data","currentRating":"data","selectedRating":"data","ratingSelected":"data","formattedRating":"options","shouldRound":"options","margin":"options","activeColors":"options","currentActiveColor":"options","activeBorderColors":"options","currentActiveBorderColor":"options","setRating":"options","resetRating":"options","createHearts":"options","round":"options","padColors":"options"}
 
 const _withId = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withScopeId"])("data-v-f675a548")
 
@@ -728,35 +737,35 @@ Object(external_commonjs_vue_commonjs2_vue_root_Vue_["pushScopeId"])("data-v-f67
 const _hoisted_1 = { class: "sr-only" }
 Object(external_commonjs_vue_commonjs2_vue_root_Vue_["popScopeId"])()
 
-const star_ratingvue_type_template_id_f675a548_scoped_true_bindings_increment_props_rating_props_roundStartRating_props_activeColor_props_inactiveColor_props_maxRating_props_starPoints_props_starSize_props_showRating_props_readOnly_props_textClass_props_inline_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_padding_props_rtl_props_fixedPoints_props_glow_props_glowColor_props_clearable_props_activeOnClick_props_animate_props_step_data_fillLevel_data_currentRating_data_selectedRating_data_ratingSelected_data_formattedRating_options_shouldRound_options_margin_options_activeColors_options_currentActiveColor_options_activeBorderColors_options_currentActiveBorderColor_options_setRating_options_resetRating_options_createStars_options_round_options_padColors_options_render = /*#__PURE__*/_withId(function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_star = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("star")
+const heart_ratingvue_type_template_id_f675a548_scoped_true_bindings_increment_props_rating_props_roundStartRating_props_activeColor_props_inactiveColor_props_maxRating_props_heartPoints_props_heartSize_props_showRating_props_readOnly_props_textClass_props_inline_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_padding_props_rtl_props_fixedPoints_props_glow_props_glowColor_props_clearable_props_activeOnClick_props_animate_props_step_data_fillLevel_data_currentRating_data_selectedRating_data_ratingSelected_data_formattedRating_options_shouldRound_options_margin_options_activeColors_options_currentActiveColor_options_activeBorderColors_options_currentActiveBorderColor_options_setRating_options_resetRating_options_createHearts_options_round_options_padColors_options_render = /*#__PURE__*/_withId(function render(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_heart = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("heart")
 
   return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("div", {
-    class: ['vue-star-rating', {'vue-star-rating-rtl':$props.rtl}, {'vue-star-rating-inline': $props.inline}]
+    class: ['vue-heart-rating', {'vue-heart-rating-rtl':$props.rtl}, {'vue-heart-rating-inline': $props.inline}]
   }, [
     Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", _hoisted_1, [
       Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "screen-reader", {
         rating: $data.selectedRating,
-        stars: $props.maxRating
+        hearts: $props.maxRating
       }, () => [
-        Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("span", null, "Rated " + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($data.selectedRating) + " stars out of " + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($props.maxRating), 1)
+        Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("span", null, "Rated " + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($data.selectedRating) + " hearts out of " + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($props.maxRating), 1)
       ])
     ]),
     Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
-      class: "vue-star-rating",
+      class: "vue-heart-rating",
       onMouseleave: _cache[2] || (_cache[2] = (...args) => ($options.resetRating(...args)))
     }, [
       (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])($props.maxRating, (n) => {
         return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", {
           key: n,
-          class: [{'vue-star-rating-pointer': !$props.readOnly }, 'vue-star-rating-star'],
+          class: [{'vue-heart-rating-pointer': !$props.readOnly }, 'vue-heart-rating-heart'],
           style: {'margin-right': $options.margin + 'px'}
         }, [
-          Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(_component_star, {
+          Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(_component_heart, {
             fill: $data.fillLevel[n-1],
-            size: $props.starSize,
-            points: $props.starPoints,
-            "star-id": n,
+            size: $props.heartSize,
+            points: $props.heartPoints,
+            "heart-id": n,
             step: $data.step,
             "active-color": $options.currentActiveColor,
             "inactive-color": $props.inactiveColor,
@@ -768,38 +777,38 @@ const star_ratingvue_type_template_id_f675a548_scoped_true_bindings_increment_pr
             glow: $props.glow,
             "glow-color": $props.glowColor,
             animate: $props.animate,
-            "onStar-selected": _cache[1] || (_cache[1] = $event => ($options.setRating($event, true))),
-            "onStar-mouse-move": $options.setRating
-          }, null, 8, ["fill", "size", "points", "star-id", "step", "active-color", "inactive-color", "border-color", "active-border-color", "border-width", "rounded-corners", "rtl", "glow", "glow-color", "animate", "onStar-mouse-move"])
+            "onHeart-selected": _cache[1] || (_cache[1] = $event => ($options.setRating($event, true))),
+            "onHeart-mouse-move": $options.setRating
+          }, null, 8, ["fill", "size", "points", "heart-id", "step", "active-color", "inactive-color", "border-color", "active-border-color", "border-width", "rounded-corners", "rtl", "glow", "glow-color", "animate", "onHeart-mouse-move"])
         ], 6))
       }), 128 /* KEYED_FRAGMENT */)),
       ($props.showRating)
         ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", {
             key: 0,
-            class: ['vue-star-rating-rating-text', $props.textClass]
+            class: ['vue-heart-rating-rating-text', $props.textClass]
           }, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($options.formattedRating), 3))
         : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)
     ], 32)
   ], 2))
 })
-// CONCATENATED MODULE: ./src/star-rating.vue?vue&type=template&id=f675a548&scoped=true&bindings={"increment":"props","rating":"props","roundStartRating":"props","activeColor":"props","inactiveColor":"props","maxRating":"props","starPoints":"props","starSize":"props","showRating":"props","readOnly":"props","textClass":"props","inline":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","padding":"props","rtl":"props","fixedPoints":"props","glow":"props","glowColor":"props","clearable":"props","activeOnClick":"props","animate":"props","step":"data","fillLevel":"data","currentRating":"data","selectedRating":"data","ratingSelected":"data","formattedRating":"options","shouldRound":"options","margin":"options","activeColors":"options","currentActiveColor":"options","activeBorderColors":"options","currentActiveBorderColor":"options","setRating":"options","resetRating":"options","createStars":"options","round":"options","padColors":"options"}
+// CONCATENATED MODULE: ./src/heart-rating.vue?vue&type=template&id=f675a548&scoped=true&bindings={"increment":"props","rating":"props","roundStartRating":"props","activeColor":"props","inactiveColor":"props","maxRating":"props","heartPoints":"props","heartSize":"props","showRating":"props","readOnly":"props","textClass":"props","inline":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","padding":"props","rtl":"props","fixedPoints":"props","glow":"props","glowColor":"props","clearable":"props","activeOnClick":"props","animate":"props","step":"data","fillLevel":"data","currentRating":"data","selectedRating":"data","ratingSelected":"data","formattedRating":"options","shouldRound":"options","margin":"options","activeColors":"options","currentActiveColor":"options","activeBorderColors":"options","currentActiveBorderColor":"options","setRating":"options","resetRating":"options","createHearts":"options","round":"options","padColors":"options"}
 
-// CONCATENATED MODULE: ./node_modules/vue-loader-v16/dist/templateLoader.js??ref--5!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/star.vue?vue&type=template&id=11edf2d6&scoped=true&bindings={"fill":"props","points":"props","size":"props","starId":"props","activeColor":"props","inactiveColor":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","rtl":"props","glow":"props","glowColor":"props","animate":"props","starPoints":"data","grad":"data","glowId":"data","isStarActive":"data","starPointsToString":"options","gradId":"options","starSize":"options","starFill":"options","border":"options","getBorderColor":"options","maxSize":"options","viewBox":"options","shouldAnimate":"options","strokeLinejoin":"options","mouseMoving":"options","touchStart":"options","touchEnd":"options","getPosition":"options","selected":"options","getRandomId":"options","calculatePoints":"options","getColor":"options","getOpacity":"options"}
+// CONCATENATED MODULE: ./node_modules/vue-loader-v16/dist/templateLoader.js??ref--5!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/heart.vue?vue&type=template&id=11edf2d6&scoped=true&bindings={"fill":"props","points":"props","size":"props","heartId":"props","activeColor":"props","inactiveColor":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","rtl":"props","glow":"props","glowColor":"props","animate":"props","heartPoints":"data","grad":"data","glowId":"data","isHeartActive":"data","heartPointsToString":"options","gradId":"options","heartSize":"options","heartFill":"options","border":"options","getBorderColor":"options","maxSize":"options","viewBox":"options","shouldAnimate":"options","strokeLinejoin":"options","mouseMoving":"options","touchStart":"options","touchEnd":"options","getPosition":"options","selected":"options","getRandomId":"options","calculatePoints":"options","getColor":"options","getOpacity":"options"}
 
-const starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_starId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_starPoints_data_grad_data_glowId_data_isStarActive_data_starPointsToString_options_gradId_options_starSize_options_starFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_withId = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withScopeId"])("data-v-11edf2d6")
+const heartvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_heartId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_heartPoints_data_grad_data_glowId_data_isHeartActive_data_heartPointsToString_options_gradId_options_heartSize_options_heartFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_withId = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withScopeId"])("data-v-11edf2d6")
 
 Object(external_commonjs_vue_commonjs2_vue_root_Vue_["pushScopeId"])("data-v-11edf2d6")
-const starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_starId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_starPoints_data_grad_data_glowId_data_isStarActive_data_starPointsToString_options_gradId_options_starSize_options_starFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_hoisted_1 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("feMerge", null, [
+const heartvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_heartId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_heartPoints_data_grad_data_glowId_data_isHeartActive_data_heartPointsToString_options_gradId_options_heartSize_options_heartFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_hoisted_1 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("feMerge", null, [
   /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("feMergeNode", { in: "coloredBlur" }),
   /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("feMergeNode", { in: "SourceGraphic" })
 ], -1)
 Object(external_commonjs_vue_commonjs2_vue_root_Vue_["popScopeId"])()
 
-const starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_starId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_starPoints_data_grad_data_glowId_data_isStarActive_data_starPointsToString_options_gradId_options_starSize_options_starFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_render = /*#__PURE__*/starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_starId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_starPoints_data_grad_data_glowId_data_isStarActive_data_starPointsToString_options_gradId_options_starSize_options_starFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_withId(function render(_ctx, _cache, $props, $setup, $data, $options) {
+const heartvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_heartId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_heartPoints_data_grad_data_glowId_data_isHeartActive_data_heartPointsToString_options_gradId_options_heartSize_options_heartFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_render = /*#__PURE__*/heartvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_heartId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_heartPoints_data_grad_data_glowId_data_isHeartActive_data_heartPointsToString_options_gradId_options_heartSize_options_heartFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_withId(function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("svg", {
-    class: ['vue-star-rating-star', {'vue-star-rating-star-rotate' : $options.shouldAnimate}],
-    height: $options.starSize,
-    width: $options.starSize,
+    class: ['vue-heart-rating-heart', {'vue-heart-rating-heart-rotate' : $options.shouldAnimate}],
+    height: $options.heartSize,
+    width: $options.heartSize,
     viewBox: $options.viewBox,
     onMousemove: _cache[1] || (_cache[1] = (...args) => ($options.mouseMoving(...args))),
     onClick: _cache[2] || (_cache[2] = (...args) => ($options.selected(...args))),
@@ -814,12 +823,12 @@ const starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_p
       y2: "0"
     }, [
       Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("stop", {
-        offset: $options.starFill,
+        offset: $options.heartFill,
         "stop-color": ($props.rtl) ? $options.getColor($props.inactiveColor) : $options.getColor($props.activeColor),
         "stop-opacity": ($props.rtl) ? $options.getOpacity($props.inactiveColor) : $options.getOpacity($props.activeColor)
       }, null, 8, ["offset", "stop-color", "stop-opacity"]),
       Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("stop", {
-        offset: $options.starFill,
+        offset: $options.heartFill,
         "stop-color": ($props.rtl) ? $options.getColor($props.activeColor) : $options.getColor($props.inactiveColor),
         "stop-opacity": ($props.rtl) ? $options.getOpacity($props.activeColor) : $options.getOpacity($props.inactiveColor)
       }, null, 8, ["offset", "stop-color", "stop-opacity"])
@@ -834,10 +843,10 @@ const starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_p
         stdDeviation: $props.glow,
         result: "coloredBlur"
       }, null, 8, ["stdDeviation"]),
-      starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_starId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_starPoints_data_grad_data_glowId_data_isStarActive_data_starPointsToString_options_gradId_options_starSize_options_starFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_hoisted_1
+      heartvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_heartId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_heartPoints_data_grad_data_glowId_data_isHeartActive_data_heartPointsToString_options_gradId_options_heartSize_options_heartFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_hoisted_1
     ], 8, ["id"]),
     Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("polygon", {
-      points: $options.starPointsToString,
+      points: $options.heartPointsToString,
       fill: $options.gradId,
       stroke: $props.glowColor,
       filter: 'url(#'+$data.glowId+')',
@@ -846,30 +855,30 @@ const starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_p
       [external_commonjs_vue_commonjs2_vue_root_Vue_["vShow"], $props.glowColor && $props.glow > 0 && $props.fill > 0]
     ]),
     Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("polygon", {
-      points: $options.starPointsToString,
+      points: $options.heartPointsToString,
       fill: $options.gradId,
       stroke: $options.getBorderColor,
       "stroke-width": $options.border,
       "stroke-linejoin": $options.strokeLinejoin
     }, null, 8, ["points", "fill", "stroke", "stroke-width", "stroke-linejoin"]),
     Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("polygon", {
-      points: $options.starPointsToString,
+      points: $options.heartPointsToString,
       fill: $options.gradId
     }, null, 8, ["points", "fill"])
   ], 42, ["height", "width", "viewBox"]))
 })
-// CONCATENATED MODULE: ./src/star.vue?vue&type=template&id=11edf2d6&scoped=true&bindings={"fill":"props","points":"props","size":"props","starId":"props","activeColor":"props","inactiveColor":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","rtl":"props","glow":"props","glowColor":"props","animate":"props","starPoints":"data","grad":"data","glowId":"data","isStarActive":"data","starPointsToString":"options","gradId":"options","starSize":"options","starFill":"options","border":"options","getBorderColor":"options","maxSize":"options","viewBox":"options","shouldAnimate":"options","strokeLinejoin":"options","mouseMoving":"options","touchStart":"options","touchEnd":"options","getPosition":"options","selected":"options","getRandomId":"options","calculatePoints":"options","getColor":"options","getOpacity":"options"}
+// CONCATENATED MODULE: ./src/heart.vue?vue&type=template&id=11edf2d6&scoped=true&bindings={"fill":"props","points":"props","size":"props","heartId":"props","activeColor":"props","inactiveColor":"props","borderColor":"props","activeBorderColor":"props","borderWidth":"props","roundedCorners":"props","rtl":"props","glow":"props","glowColor":"props","animate":"props","heartPoints":"data","grad":"data","glowId":"data","isHeartActive":"data","heartPointsToString":"options","gradId":"options","heartSize":"options","heartFill":"options","border":"options","getBorderColor":"options","maxSize":"options","viewBox":"options","shouldAnimate":"options","strokeLinejoin":"options","mouseMoving":"options","touchStart":"options","touchEnd":"options","getPosition":"options","selected":"options","getRandomId":"options","calculatePoints":"options","getColor":"options","getOpacity":"options"}
 
 // EXTERNAL MODULE: ./src/classes/AlphaColor.js
 var AlphaColor = __webpack_require__("d4aa");
 var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/star.vue?vue&type=script&lang=js
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/heart.vue?vue&type=script&lang=js
 
 
 
-/* harmony default export */ var starvue_type_script_lang_js = ({
-    name: 'Star',
+/* harmony default export */ var heartvue_type_script_lang_js = ({
+    name: 'Heart',
     props: {
         fill: {
             type: Number,
@@ -885,7 +894,7 @@ var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
             type: Number,
             default: 50
         },
-        starId: {
+        heartId: {
             type: Number,
             required: true
         },
@@ -931,28 +940,28 @@ var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
             default: false
         }
     },
-    emits: ['star-mouse-move', 'star-selected'],
+    emits: ['heart-mouse-move', 'heart-selected'],
     data() {
         return {
-            starPoints: [19.8, 2.2, 6.6, 43.56, 39.6, 17.16, 0, 17.16, 33, 43.56],
+            heartPoints: [19.8, 2.2, 6.6, 43.56, 39.6, 17.16, 0, 17.16, 33, 43.56],
             grad: '',
             glowId: '',
-            isStarActive: true
+            isHeartActive: true
         }
     },
     computed: {
-        starPointsToString() {
-            return this.starPoints.join(',')
+        heartPointsToString() {
+            return this.heartPoints.join(',')
         },
         gradId() {
             return 'url(#' + this.grad + ')'
         },
-        starSize() {
-            // Adjust star size when rounded corners are set with no border, to account for the 'hidden' border
+        heartSize() {
+            // Adjust heart size when rounded corners are set with no border, to account for the 'hidden' border
             const size = (this.roundedCorners && this.borderWidth <= 0) ? parseInt(this.size) - parseInt(this.border) : this.size
             return parseInt(size) + parseInt(this.border)
         },
-        starFill() {
+        heartFill() {
             return (this.rtl) ? 100 - this.fill + '%' : this.fill + '%'
         },
         border() {
@@ -967,7 +976,7 @@ var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
             return (this.fill <= 0) ? this.borderColor : this.activeBorderColor
         },
         maxSize() {
-            return this.starPoints.reduce(function(a, b) {
+            return this.heartPoints.reduce(function(a, b) {
                 return Math.max(a, b)
             })
         },
@@ -975,14 +984,14 @@ var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
             return '0 0 ' + this.maxSize + ' ' + this.maxSize
         },
         shouldAnimate() {
-            return this.animate && this.isStarActive
+            return this.animate && this.isHeartActive
         },
         strokeLinejoin() {
             return this.roundedCorners ? 'round' : 'miter'
         }
     },
     created() {
-        this.starPoints = (this.points.length) ? this.points : this.starPoints
+        this.heartPoints = (this.points.length) ? this.points : this.heartPoints
         this.calculatePoints()
         this.grad = this.getRandomId()
         this.glowId = this.getRandomId()
@@ -990,34 +999,34 @@ var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
     methods: {
         mouseMoving($event) {
             if ($event.touchAction !== 'undefined') {
-                this.$emit('star-mouse-move', {
+                this.$emit('heart-mouse-move', {
                     event: $event,
                     position: this.getPosition($event),
-                    id: this.starId
+                    id: this.heartId
                 })
             }
         },
         touchStart() {
             this.$nextTick(() => {
-                this.isStarActive = true
+                this.isHeartActive = true
             })
         },
         touchEnd() {
             this.$nextTick(() => {
-                this.isStarActive = false
+                this.isHeartActive = false
             })
         },
         getPosition($event) {
             // calculate position in percentage.
-            var starWidth = (92 / 100) * this.size
+            var heartWidth = (92 / 100) * this.size
             const offset = (this.rtl) ? Math.min($event.offsetX, 45) : Math.max($event.offsetX, 1)
-            var position = Math.round((100 / starWidth) * offset)
+            var position = Math.round((100 / heartWidth) * offset)
 
             return Math.min(position, 100)
         },
         selected($event) {
-            this.$emit('star-selected', {
-                id: this.starId,
+            this.$emit('heart-selected', {
+                id: this.heartId,
                 position: this.getPosition($event)
             })
         },
@@ -1025,7 +1034,7 @@ var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
             return Math.random().toString(36).substring(7)
         },
         calculatePoints() {
-            this.starPoints = this.starPoints.map((point, i) => {
+            this.heartPoints = this.heartPoints.map((point, i) => {
                 const offset = i % 2 === 0 ? this.border * 1.5 : 0
                 return ((this.size / this.maxSize) * point) + offset
             })
@@ -1039,31 +1048,31 @@ var AlphaColor_default = /*#__PURE__*/__webpack_require__.n(AlphaColor);
     }
 });
 
-// CONCATENATED MODULE: ./src/star.vue?vue&type=script&lang=js
+// CONCATENATED MODULE: ./src/heart.vue?vue&type=script&lang=js
  
-// EXTERNAL MODULE: ./src/star.vue?vue&type=style&index=0&id=11edf2d6&scoped=true&lang=css
-var starvue_type_style_index_0_id_11edf2d6_scoped_true_lang_css = __webpack_require__("d1b1");
+// EXTERNAL MODULE: ./src/heart.vue?vue&type=style&index=0&id=11edf2d6&scoped=true&lang=css
+var heartvue_type_style_index_0_id_11edf2d6_scoped_true_lang_css = __webpack_require__("d1b1");
 
-// CONCATENATED MODULE: ./src/star.vue
-
-
+// CONCATENATED MODULE: ./src/heart.vue
 
 
 
-starvue_type_script_lang_js.render = starvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_starId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_starPoints_data_grad_data_glowId_data_isStarActive_data_starPointsToString_options_gradId_options_starSize_options_starFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_render
-starvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
 
-/* harmony default export */ var star = (starvue_type_script_lang_js);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/star-rating.vue?vue&type=script&lang=js
+
+heartvue_type_script_lang_js.render = heartvue_type_template_id_11edf2d6_scoped_true_bindings_fill_props_points_props_size_props_heartId_props_activeColor_props_inactiveColor_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_rtl_props_glow_props_glowColor_props_animate_props_heartPoints_data_grad_data_glowId_data_isHeartActive_data_heartPointsToString_options_gradId_options_heartSize_options_heartFill_options_border_options_getBorderColor_options_maxSize_options_viewBox_options_shouldAnimate_options_strokeLinejoin_options_mouseMoving_options_touchStart_options_touchEnd_options_getPosition_options_selected_options_getRandomId_options_calculatePoints_options_getColor_options_getOpacity_options_render
+heartvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
+
+/* harmony default export */ var heart = (heartvue_type_script_lang_js);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/heart-rating.vue?vue&type=script&lang=js
 
 /* eslint-disable vue/custom-event-name-casing */
 
 
-/* harmony default export */ var star_ratingvue_type_script_lang_js = ({
+/* harmony default export */ var heart_ratingvue_type_script_lang_js = ({
 
-    name: 'VueStarRating',
+    name: 'VueHeartRating',
     components: {
-        Star: star
+        Heart: heart
     },
     props: {
         increment: {
@@ -1090,13 +1099,13 @@ starvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
             type: Number,
             default: 5
         },
-        starPoints: {
+        heartPoints: {
             type: Array,
             default() {
                 return []
             }
         },
-        starSize: {
+        heartSize: {
             type: Number,
             default: 50
         },
@@ -1219,14 +1228,14 @@ starvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
         rating(val) {
             this.currentRating = val
             this.selectedRating = val
-            this.createStars(this.shouldRound)
+            this.createHearts(this.shouldRound)
         }
     },
     created() {
         this.step = this.increment * 100
         this.currentRating = this.rating
         this.selectedRating = this.currentRating
-        this.createStars(this.roundStartRating)
+        this.createHearts(this.roundStartRating)
     },
     methods: {
         setRating($event, persist) {
@@ -1235,7 +1244,7 @@ starvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
                 this.currentRating = (($event.id + position) - 1).toFixed(2)
                 this.currentRating = (this.currentRating > this.maxRating) ? this.maxRating : this.currentRating
                 if (persist) {
-                    this.createStars(true, true)
+                    this.createHearts(true, true)
                     if (this.clearable && this.currentRating === this.selectedRating) {
                         this.selectedRating = 0
                     } else {
@@ -1246,7 +1255,7 @@ starvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
                     this.ratingSelected = true
 
                 } else {
-                    this.createStars(true, !this.activeOnClick)
+                    this.createHearts(true, !this.activeOnClick)
                     this.$emit('hover:rating', this.currentRating)
                 }
             }
@@ -1254,10 +1263,10 @@ starvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
         resetRating() {
             if (!this.readOnly) {
                 this.currentRating = this.selectedRating
-                this.createStars(this.shouldRound)
+                this.createHearts(this.shouldRound)
             }
         },
-        createStars(round = true, applyFill = true) {
+        createHearts(round = true, applyFill = true) {
             if (round) {
                 this.round()
             }
@@ -1281,25 +1290,25 @@ starvue_type_script_lang_js.__scopeId = "data-v-11edf2d6"
     }
 });
 
-// CONCATENATED MODULE: ./src/star-rating.vue?vue&type=script&lang=js
+// CONCATENATED MODULE: ./src/heart-rating.vue?vue&type=script&lang=js
  
-// EXTERNAL MODULE: ./src/star-rating.vue?vue&type=style&index=0&id=f675a548&scoped=true&lang=css
-var star_ratingvue_type_style_index_0_id_f675a548_scoped_true_lang_css = __webpack_require__("9ff5");
+// EXTERNAL MODULE: ./src/heart-rating.vue?vue&type=style&index=0&id=f675a548&scoped=true&lang=css
+var heart_ratingvue_type_style_index_0_id_f675a548_scoped_true_lang_css = __webpack_require__("9ff5");
 
-// CONCATENATED MODULE: ./src/star-rating.vue
-
-
+// CONCATENATED MODULE: ./src/heart-rating.vue
 
 
 
-star_ratingvue_type_script_lang_js.render = star_ratingvue_type_template_id_f675a548_scoped_true_bindings_increment_props_rating_props_roundStartRating_props_activeColor_props_inactiveColor_props_maxRating_props_starPoints_props_starSize_props_showRating_props_readOnly_props_textClass_props_inline_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_padding_props_rtl_props_fixedPoints_props_glow_props_glowColor_props_clearable_props_activeOnClick_props_animate_props_step_data_fillLevel_data_currentRating_data_selectedRating_data_ratingSelected_data_formattedRating_options_shouldRound_options_margin_options_activeColors_options_currentActiveColor_options_activeBorderColors_options_currentActiveBorderColor_options_setRating_options_resetRating_options_createStars_options_round_options_padColors_options_render
-star_ratingvue_type_script_lang_js.__scopeId = "data-v-f675a548"
 
-/* harmony default export */ var star_rating = (star_ratingvue_type_script_lang_js);
+
+heart_ratingvue_type_script_lang_js.render = heart_ratingvue_type_template_id_f675a548_scoped_true_bindings_increment_props_rating_props_roundStartRating_props_activeColor_props_inactiveColor_props_maxRating_props_heartPoints_props_heartSize_props_showRating_props_readOnly_props_textClass_props_inline_props_borderColor_props_activeBorderColor_props_borderWidth_props_roundedCorners_props_padding_props_rtl_props_fixedPoints_props_glow_props_glowColor_props_clearable_props_activeOnClick_props_animate_props_step_data_fillLevel_data_currentRating_data_selectedRating_data_ratingSelected_data_formattedRating_options_shouldRound_options_margin_options_activeColors_options_currentActiveColor_options_activeBorderColors_options_currentActiveBorderColor_options_setRating_options_resetRating_options_createHearts_options_round_options_padColors_options_render
+heart_ratingvue_type_script_lang_js.__scopeId = "data-v-f675a548"
+
+/* harmony default export */ var heart_rating = (heart_ratingvue_type_script_lang_js);
 // CONCATENATED MODULE: ./src/index.js
 
 
-/* harmony default export */ var src_0 = (star_rating);
+/* harmony default export */ var src_0 = (heart_rating);
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
@@ -1311,4 +1320,5 @@ star_ratingvue_type_script_lang_js.__scopeId = "data-v-f675a548"
 /***/ })
 
 /******/ });
-//# sourceMappingURL=VueStarRating.common.js.map
+});
+//# sourceMappingURL=VueHeartRating.umd.js.map

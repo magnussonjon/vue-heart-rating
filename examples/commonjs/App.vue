@@ -1,9 +1,9 @@
 <template>
     <div style="background: #000;padding:50px;">
-        <star-rating
+        <heart-rating
                 v-model:rating="rating"
                 :round-start-rating="false"
-                :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"
+                :heart-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"
                 :border-width="4"
                 :active-color="['#ae0000','#003333']"
                 :active-border-color="['#F6546A','#a8c3c0']"
@@ -13,9 +13,9 @@
                 :padding="3"
         >
             <template v-slot:screen-reader="slotProps">
-                This product has been rated {{slotProps.rating}} out of {{slotProps.stars}}
+                This product has been rated {{slotProps.rating}} out of {{slotProps.hearts}}
             </template>
-        </star-rating>
+        </heart-rating>
         <a
                 href="#"
                 @click.prevent="rating = 3.5"
@@ -24,11 +24,11 @@
     </div>
 </template>
 <script type="text/javascript">
-    import StarRating from '../../src/star-rating.vue';
+    import HeartRating from '../../src/heart-rating.vue';
 
     export default {
         components: {
-            StarRating
+            HeartRating
         },
         data() {
             return {

@@ -1,30 +1,30 @@
 <template>
-  <div :class="['vue-star-rating', {'vue-star-rating-rtl':rtl}, {'vue-star-rating-inline': inline}]">
+  <div :class="['vue-heart-rating', {'vue-heart-rating-rtl':rtl}, {'vue-heart-rating-inline': inline}]">
     <div class="sr-only">
       <slot
         name="screen-reader"
         :rating="selectedRating"
-        :stars="maxRating"
+        :hearts="maxRating"
       >
-        <span>Rated {{ selectedRating }} stars out of {{ maxRating }}</span>
+        <span>Rated {{ selectedRating }} hearts out of {{ maxRating }}</span>
       </slot>
     </div>
 
     <div
-      class="vue-star-rating"
+      class="vue-heart-rating"
       @mouseleave="resetRating"
     >
       <span
         v-for="n in maxRating"
         :key="n"
-        :class="[{'vue-star-rating-pointer': !readOnly }, 'vue-star-rating-star']"
+        :class="[{'vue-heart-rating-pointer': !readOnly }, 'vue-heart-rating-heart']"
         :style="{'margin-right': margin + 'px'}"
       >
-        <star
+        <heart
           :fill="fillLevel[n-1]"
-          :size="starSize"
-          :points="starPoints"
-          :star-id="n"
+          :size="heartSize"
+          :points="heartPoints"
+          :heart-id="n"
           :step="step"
           :active-color="currentActiveColor"
           :inactive-color="inactiveColor"
@@ -36,26 +36,26 @@
           :glow="glow"
           :glow-color="glowColor"
           :animate="animate"
-          @star-selected="setRating($event, true)"
-          @star-mouse-move="setRating"
+          @heart-selected="setRating($event, true)"
+          @heart-mouse-move="setRating"
         />
       </span>
       <span
         v-if="showRating"
-        :class="['vue-star-rating-rating-text', textClass]"
+        :class="['vue-heart-rating-rating-text', textClass]"
       > {{ formattedRating }}</span>
     </div>
   </div>
 </template>
 <script type="text/javascript">
 /* eslint-disable vue/custom-event-name-casing */
-import Star from './star.vue'
+import Heart from './heart.vue'
 
 export default {
 
-    name: 'VueStarRating',
+    name: 'VueHeartRating',
     components: {
-        Star
+        Heart
     },
     props: {
         increment: {
@@ -82,13 +82,13 @@ export default {
             type: Number,
             default: 5
         },
-        starPoints: {
+        heartPoints: {
             type: Array,
             default() {
                 return []
             }
         },
-        starSize: {
+        heartSize: {
             type: Number,
             default: 50
         },
@@ -215,14 +215,14 @@ export default {
         rating(val) {
             this.currentRating = val
             this.selectedRating = val
-            this.createStars(this.shouldRound)
+            this.createHearts(this.shouldRound)
         }
     },
     created() {
         this.step = this.increment * 100
         this.currentRating = this.rating
         this.selectedRating = this.currentRating
-        this.createStars(this.roundStartRating)
+        this.createHearts(this.roundStartRating)
     },
     methods: {
         setRating($event, persist) {
@@ -231,13 +231,13 @@ export default {
                 this.currentRating = (($event.id + position) - 1).toFixed(2)
                 this.currentRating = (this.currentRating > this.maxRating) ? this.maxRating : this.currentRating
                 if (persist) {
-                    this.createStars(true, true)
+                    this.createHearts(true, true)
                     this.selectedRating = (this.clearable && this.currentRating === this.selectedRating) ? 0 : this.currentRating
                     this.$emit('update:rating', this.selectedRating)
                     this.ratingSelected = true
 
                 } else {
-                    this.createStars(true, !this.activeOnClick)
+                    this.createHearts(true, !this.activeOnClick)
                     this.$emit('hover:rating', this.currentRating)
                 }
             }
@@ -245,10 +245,10 @@ export default {
         resetRating() {
             if (!this.readOnly) {
                 this.currentRating = this.selectedRating
-                this.createStars(this.shouldRound)
+                this.createHearts(this.shouldRound)
             }
         },
-        createStars(round = true, applyFill = true) {
+        createHearts(round = true, applyFill = true) {
 
             this.currentRating = (round) ? this.roundedRating : this.currentRating
             for (let i = 0; i < this.maxRating; i++) {
@@ -268,34 +268,34 @@ export default {
 }
 </script>
 <style scoped>
-    .vue-star-rating-star {
+    .vue-heart-rating-heart {
         display: inline-block;
         -webkit-tap-highlight-color: transparent;
     }
 
-    .vue-star-rating-pointer {
+    .vue-heart-rating-pointer {
         cursor: pointer;
     }
 
-    .vue-star-rating {
+    .vue-heart-rating {
         display: flex;
         align-items: center;
     }
 
-    .vue-star-rating-inline {
+    .vue-heart-rating-inline {
         display: inline-flex;
     }
 
 
-    .vue-star-rating-rating-text {
+    .vue-heart-rating-rating-text {
         margin-left: 7px;
     }
 
-    .vue-star-rating-rtl {
+    .vue-heart-rating-rtl {
         direction: rtl;
     }
 
-    .vue-star-rating-rtl .vue-star-rating-rating-text {
+    .vue-heart-rating-rtl .vue-heart-rating-rating-text {
         margin-right: 10px;
         direction: rtl;
     }
