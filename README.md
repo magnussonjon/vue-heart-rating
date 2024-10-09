@@ -1,19 +1,11 @@
-# Heart Rating Component for Vue 2.x / 3.x
+# Heart Rating Component for Vue 3.x
 
-[![Build Status](https://travis-ci.org/craigh411/vue-heart-rating.svg?branch=master)](https://travis-ci.org/craigh411/vue-heart-rating)
+[![Build Status](https://travis-ci.org/magnussonjon/vue-heart-rating.svg?branch=master)](https://travis-ci.org/magnussonjon/vue-heart-rating)
 [![npm](https://img.shields.io/npm/dt/vue-heart-rating.svg)]()
 
-A simple, highly customisable heart rating component for Vue 2.x. / 3.x
+A simple, highly customizable heart rating component for Vue 3.x.
 
-> Need more than hearts? Check out [vue-rate-it](https://github.com/craigh411/vue-rate-it) with hundreds of different raters built in!
-
-### Screenshot
-
-![heart-rating.png](https://user-images.githubusercontent.com/13747552/76623388-4ee74580-652b-11ea-9efb-5fb0ca548980.png)
-
-#### See it in action:
-- [Vue 2 Examples](https://jsfiddle.net/craig_h_411/992o7cq5/)
-- [Vue 3 Examples](https://codepen.io/craigh411/pen/abNXVQN)
+> This component is based on [vue-star-rating](https://www.npmjs.com/package/vue-star-rating), but it has been modified to use hearts instead of stars.
 
 ## Features:
 
@@ -30,15 +22,9 @@ A simple, highly customisable heart rating component for Vue 2.x. / 3.x
 
 Install via npm:
 
-#### Vue 2.x Install
-
-`npm install vue-heart-rating`
-
 #### Vue 3.x Install
 
-If you're using Vue 3 you will currently need to install the `next` version of `vue-heart-rating`
-
-`npm install vue-heart-rating@next`
+`npm install vue-heart-rating`
 
 ---
 
@@ -60,37 +46,6 @@ You can then use the following markup in your project:
 
 ---
 
-### Via CDN
-
-You may also include `vue-heart-rating` directly in to your webpage via Unpkg. Simply add the following script tag:
-
-#### Vue 2.x
-
-```javascript
-<script src="https://unpkg.com/vue-heart-rating/dist/VueHeartRating.umd.min.js"></script>`
-```
-
-You will need to register the component by doing:
-
-```javascript
-Vue.component('heart-rating', VueHeartRating.default);
-```
-
-#### Vue 3.x
-
-```javascript
-<script src="https://unpkg.com/vue-heart-rating@next/dist/VueHeartRating.umd.min.js"></script>
-````
-
-```javascript
-const app = Vue.createApp({ 
-  // Your component code
- })
-app.component('heart-rating', VueHeartRating.default)
-app.mount('#app')
-```
-
-
 ## Getting Started
 
 To get started with `vue-heart-rating` you will want to sync the rating values between the component and parent, you can then take a look at the props and custom events section of the docs to customise your `heart-rating` component.
@@ -98,12 +53,6 @@ To get started with `vue-heart-rating` you will want to sync the rating values b
 ### Syncing Rating Values with V-Model
 
 `vue-heart-rating` supports `v-model`, which is the simplest way to keep your ratings in sync:
-
-#### Vue 2.2+
-
-```HTML
-<heart-rating v-model="rating"></heart-rating>
-```
 
 #### Vue 3.x
 
@@ -128,7 +77,6 @@ These props provide general functionailty to the heart rating component
 | increment  |  The rating increment, for example pass 0.5 for half hearts or 0.01 for fluid hearts. Expects a number between 0.01 - 1. | Number | 1
 | rating  | The initial rating, this will automatically round to the closest increment, so for the most accurate rating pass 0.01 as increment or set the `round-start-rating` prop to false  | Number | 0 |
 | max-rating  | The maximum rating, this lets `vue-heart-rating` know how many hearts to display | Number | 5 |
-| heart-points | The points defining a custom heart shape.<br><small>_If no points are passed the default heart shape is used._</small> | Array| [] |
 | read-only  | When set to true, the rating cannot be edited. Use in conjuction with `increment` to define rounding precision.  | Boolean | false |
 | show-rating  | Whether or not to show the rating next to the hearts  | Boolean | true |
 | fixed-points  | Specify a fixed number of digits after the decimal point. | Number | null |
@@ -153,7 +101,6 @@ These props are used to style the heart rating component
 | border-width  | Sets the width of the border for each heart | Number | 0 |
 | animate  | Set to true for an animation to be applied on mouseover | Boolean | false |
 | padding  | Pads the right of each heart so distance between hearts can be altered | Number | 0 |
-| rounded-corners | Whether or not to round the heart's corners | Boolean | false |
 | inline  | Sets the heart rating to display inline | Boolean | false |
 | glow | Adds a subtle glow around each active heart, this should be a number to spread the glow | Number | 0 |
 | glow-color | Sets the color for the glow  | String | #fff |
@@ -188,35 +135,6 @@ Any array you pass will be padded if the number of elements in the array is less
 ### Custom Events
 
 `vue-heart-rating` fires the following custom events, simply use `v-on:` or the `@` shortand to capture the event.
-
-### Vue 2.x Events
-
-| Event  | Description | Return Value
-| ------------- | ------------- |-----------|
-| rating-selected  | Returns the rating the user selects via the click event |  rating
-| current-rating  | Returns the rating that the users mouse is currently over  | rating
-
-#### Vue 2.x Example
-
-```HTML
-<heart-rating @rating-selected ="setRating"></heart-rating>
-```
-
-Then in your view model:
-
-```javascript
-new Vue({
-  el: '#app',
-  methods: {
-    setRating: function(rating){
-      this.rating= rating;
-    }
-  },
-  data: {
-    rating: 0
-  }
-});
-```
 
 ### Vue 3.x Events
 
@@ -273,7 +191,3 @@ app.mount('#app')
 
 
 ------------------------------------------------
-
-Open-source should always be 100% FREE! but, if you're feeling generous, feel free to:
-
-<a href="https://www.buymeacoffee.com/fkocI2e6H" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
