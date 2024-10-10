@@ -31,7 +31,7 @@ exports.A = (sfc, props) => {
 
 /***/ }),
 
-/***/ 528:
+/***/ 966:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.vue-heart-rating-heart[data-v-29a767d8]{display:inline-block;-webkit-tap-highlight-color:transparent}.vue-heart-rating-pointer[data-v-29a767d8]{cursor:pointer}.vue-heart-rating[data-v-29a767d8]{display:flex;align-items:center}.vue-heart-rating-inline[data-v-29a767d8]{display:inline-flex}.vue-heart-rating-rating-text[data-v-29a767d8]{margin-left:7px}.vue-heart-rating-rtl[data-v-29a767d8]{direction:rtl}.vue-heart-rating-rtl .vue-heart-rating-rating-text[data-v-29a767d8]{margin-right:10px;direction:rtl}.sr-only[data-v-29a767d8]{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}`, ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `.vue-heart-rating-heart[data-v-0dd9db4c]{display:inline-block;-webkit-tap-highlight-color:transparent}.vue-heart-rating-pointer[data-v-0dd9db4c]{cursor:pointer}.vue-heart-rating[data-v-0dd9db4c]{display:flex;align-items:center}.vue-heart-rating-inline[data-v-0dd9db4c]{display:inline-flex}.vue-heart-rating-rating-text[data-v-0dd9db4c]{margin-left:7px}.vue-heart-rating-rtl[data-v-0dd9db4c]{direction:rtl}.vue-heart-rating-rtl .vue-heart-rating-rating-text[data-v-0dd9db4c]{margin-right:10px;direction:rtl}.sr-only[data-v-0dd9db4c]{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -183,19 +183,19 @@ module.exports = function (i) {
 
 /***/ }),
 
-/***/ 339:
+/***/ 173:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(528);
+var content = __webpack_require__(966);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(548)/* ["default"] */ .A)
-var update = add("5bc704e6", content, true, {"sourceMap":false,"shadowMode":false});
+var update = add("5b397d71", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -651,7 +651,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(274);
-;// ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/heart-rating.vue?vue&type=template&id=29a767d8&scoped=true
+;// ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/heart-rating.vue?vue&type=template&id=0dd9db4c&scoped=true
 
 
 const _hoisted_1 = { class: "sr-only" }
@@ -709,7 +709,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     ], 32)
   ], 2))
 }
-;// ./src/heart-rating.vue?vue&type=template&id=29a767d8&scoped=true
+;// ./src/heart-rating.vue?vue&type=template&id=0dd9db4c&scoped=true
 
 ;// ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/heart.vue?vue&type=template&id=79a236c4&scoped=true
 
@@ -985,7 +985,7 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(heartvue_type_s
       },
       activeColor: {
         type: [String, Array],
-        default: '#ffd055'
+        default: '#990000'
       },
       inactiveColor: {
         type: String,
@@ -1175,9 +1175,9 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(heartvue_type_s
   
 ;// ./src/heart-rating.vue?vue&type=script&lang=js
  
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-52.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-52.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-52.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-52.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/heart-rating.vue?vue&type=style&index=0&id=29a767d8&scoped=true&lang=css
-var heart_ratingvue_type_style_index_0_id_29a767d8_scoped_true_lang_css = __webpack_require__(339);
-;// ./src/heart-rating.vue?vue&type=style&index=0&id=29a767d8&scoped=true&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-52.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-52.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-52.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-52.use[3]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/heart-rating.vue?vue&type=style&index=0&id=0dd9db4c&scoped=true&lang=css
+var heart_ratingvue_type_style_index_0_id_0dd9db4c_scoped_true_lang_css = __webpack_require__(173);
+;// ./src/heart-rating.vue?vue&type=style&index=0&id=0dd9db4c&scoped=true&lang=css
 
 ;// ./src/heart-rating.vue
 
@@ -1187,7 +1187,7 @@ var heart_ratingvue_type_style_index_0_id_29a767d8_scoped_true_lang_css = __webp
 ;
 
 
-const heart_rating_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(heart_ratingvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-29a767d8"]])
+const heart_rating_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(heart_ratingvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-0dd9db4c"]])
 
 /* harmony default export */ const heart_rating = (heart_rating_exports_);
 ;// ./src/index.js

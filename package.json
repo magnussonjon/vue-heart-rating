@@ -1,6 +1,6 @@
 {
   "name": "vue-heart-rating",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, highly customizable heart rating component for Vue 3.x.",
   "main": "dist/VueHeartRating.common.js",
   "scripts": {

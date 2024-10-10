@@ -71,7 +71,7 @@
       },
       activeColor: {
         type: [String, Array],
-        default: '#ffd055'
+        default: '#990000'
       },
       inactiveColor: {
         type: String,
